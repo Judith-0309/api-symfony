@@ -1,0 +1,10 @@
+composer create-project symfony/website-skeleton:"^5.0" my_project_name
+installer Symfony CLI (pour qu'il reconnaisse symfony en tant que commande) https://symfony.com/download
+composer req api
+DATABASE_URL=mysql://root:db_password@127.0.0.1:3306/api-symfony?serverVersion=mariadb-10.4.13
+bin/console doctrine:database:create (creation de la base de donnée)
+creer les entités dans le dossier Entity avec comme annotation * @ApiResource()
+ ajouter le use ApiPlatform\Core\Annotation\ApiResource;
+
+bin/console doctrine:schema:create  (creation des tables)
+http://127.0.0.1:8000/api
